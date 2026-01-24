@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 TIMEFRAME_RULES = {
     "1d": "D",
     "1w": "W",
-    "1m": "M",
+    "1m": "ME",  # month end
 }
 
 def load_ohlcv_tech(symbol: str) -> pd.DataFrame:
