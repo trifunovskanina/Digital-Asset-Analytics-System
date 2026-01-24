@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Asset Analytics System</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-title">Digital Asset Analytics System</div>
+        <nav class="nav-links">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/tech-analysis-form}">Technical Analysis</a>
+            <a th:href="@{/lstm-form}">LSTM Forecast</a>
+            <a th:href="@{/nlp}">Sentiment Analysis</a>
+        </nav>
+    </header>
+
+    <h1>DIGITAL ASSETS</h1>
+
+    <form method="GET" th:action="@{/}" style="margin-bottom: 20px;" class="filter-box">
+        <label>
+            Symbol:
+            <input type="text" name="symbol">
+        </label>
+
+        <label>
+            From:
+            <input type="text" name="fromDate">
+        </label>
+
+        <label>
+            To:
+            <input type="text" name="toDate">
+        </label>
+
+        <label>
+            Limit:
+            <input type="text" name="limit">
+        </label>
+
+        <button type="submit" style="margin-left: 10px;">Filter</button>
+        <a th:href="@{/}" style="margin-left: 5px;">Clear</a>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Open</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Close</th>
+                <th>Volume</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="row : ${rows}">
+                <td th:text="${row.date}"></td>
+                <td th:text="${row.open}"></td>
+                <td th:text="${row.high}"></td>
+                <td th:text="${row.low}"></td>
+                <td th:text="${row.close}"></td>
+                <td th:text="${row.volume}"></td>
+                <td>
+                    <a th:href="@{/coin/{symbol}(symbol=${row.symbol})}"
+                       th:text="${row.symbol.toUpperCase()}"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

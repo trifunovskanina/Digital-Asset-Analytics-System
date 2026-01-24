@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: analytics
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db:/docker-entrypoint-initdb.d
+      - ./db/data:/data:ro
+
+  lstm:
+    build:
+      context: .
+      dockerfile: lstm/Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+
+  tech:
+    build:
+      context: .
+      dockerfile: tech/Dockerfile
+    ports:
+      - "8001:8001"
+    depends_on:
+      - postgres
+
+  nlp:
+    build:
+      context: .
+      dockerfile: nlp/Dockerfile
+    ports:
+      - "8002:8002"
+    depends_on:
+      - postgres
+
+  spring:
+    build:
+      context: .
+      dockerfile: spring/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/analytics
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: admin
+    depends_on:
+      - postgres
+      - lstm
+      - tech
+      - nlp
+
+volumes:
+  pgdata:
