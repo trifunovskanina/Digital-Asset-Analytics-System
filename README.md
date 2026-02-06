@@ -1,6 +1,6 @@
 # Microservices with Docker
 
-This project is a containerized full-stack system composed of a Spring MVC application, three FastAPI microservices, and a PostgreSQL database. All services are orchestrated using Docker Compose.
+This project is a containerized system composed of a Spring MVC application, three FastAPI microservices, and a PostgreSQL database. All services are orchestrated using Docker Compose.
 
 ---
 
