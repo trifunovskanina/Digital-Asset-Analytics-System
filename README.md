@@ -42,7 +42,7 @@ Services communicate internally through Docker’s network.
 ## Service Description
 
 ### Spring MVC (8080)
-The main application.  
+Acts as the main application of the system.  
 Handles client requests and communicates with the FastAPI microservices.
 
 ### LSTM Microservice (8000)
