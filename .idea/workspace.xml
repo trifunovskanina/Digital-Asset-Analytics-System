@@ -4,28 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48603e5d-cdd0-4324-95f2-92cba0a45765" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="0848e8a9-d539-4eb4-877d-41d62f00c6e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/python/lstm/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/python/lstm/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lstm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/lstm/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -37,7 +31,7 @@
   "customColor": "",
   "associatedIndex": 5
 }]]></component>
-  <component name="ProjectId" id="39cPKhcsNpYHhLuFLE39voQFvOY" />
+  <component name="ProjectId" id="39cpwXWS3UeRqsq0u5LB0nImdnJ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,42 +40,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AnalyticsApplication (1).executor": "Run",
-    "Spring Boot.AnalyticsApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/NINA/OneDrive/Desktop/digital-asset-analytics-system",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
-    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.AnalyticsApplication (1)">
-    <configuration name="AnalyticsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="analytics" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.trifunovska.analytics.AnalyticsApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\NINA\OneDrive\Desktop\digital-asset-analytics-system" />
+    </key>
+  </component>
+  <component name="RunManager">
     <configuration name="AnalyticsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="analytics" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="trifunovska.analytics.AnalyticsApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.trifunovska.analytics.AnalyticsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,12 +75,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="48603e5d-cdd0-4324-95f2-92cba0a45765" name="Changes" comment="" />
-      <created>1770992326411</created>
+      <changelist id="0848e8a9-d539-4eb4-877d-41d62f00c6e7" name="Changes" comment="" />
+      <created>1771005455223</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1770992326411</updated>
-      <workItem from="1770992330095" duration="9937000" />
+      <updated>1771005455223</updated>
+      <workItem from="1771005458076" duration="595000" />
     </task>
     <servers />
   </component>

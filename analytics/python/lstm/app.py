@@ -26,7 +26,6 @@ from lstm.lstm import (
 
 # python -m uvicorn app:app --port 8000
 # localhost:8000/predict
-# localhost:8000/tech-analysis
 app = FastAPI()
 
 class LstmRequest(BaseModel):
