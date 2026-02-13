@@ -2,7 +2,7 @@
 
 This is a containerized system composed of a Spring MVC application, two FastAPI microservices, 
 and a PostgreSQL database. It integrates historical market data and news sentiment analysis to provide 
-machine-learning-driven insights for digital assets.
+machine-learning insights for digital assets.
 
 ---
 
