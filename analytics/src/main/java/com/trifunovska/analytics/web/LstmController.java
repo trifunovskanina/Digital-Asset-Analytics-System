@@ -1,6 +1,6 @@
-package trifunovska.analytics.web;
+package com.trifunovska.analytics.web;
 
-import trifunovska.analytics.service.LstmService;
+import com.trifunovska.analytics.service.LstmService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

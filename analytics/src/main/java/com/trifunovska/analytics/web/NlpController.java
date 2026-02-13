@@ -1,6 +1,6 @@
-package trifunovska.analytics.web;
+package com.trifunovska.analytics.web;
 
-import trifunovska.analytics.service.NlpService;
+import com.trifunovska.analytics.service.NlpService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,13 +28,12 @@ public class NlpController {
 
         List<Map<String, Object>> rows = service.predictSentiment(fromDate, toDate, limit);
 
-        assert rows != null;
         long positiveCount = rows.stream()
                         .filter(row -> "POSITIVE".equals(row.get("sentiment_label")))
-                                .count();
+                        .count();
         long negativeCount = rows.stream()
                         .filter(row -> "NEGATIVE".equals(row.get("sentiment_label")))
-                                .count();
+                        .count();
 
         model.addAttribute("rows", rows);
 

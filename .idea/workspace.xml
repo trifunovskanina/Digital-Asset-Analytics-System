@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="48603e5d-cdd0-4324-95f2-92cba0a45765" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/digital-asset-analytics-system.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/service/OhlcvService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/python/nlp/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/python/nlp/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/python/nlp/nlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/python/nlp/nlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/python/tech/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/python/tech/tech_analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/AnalyticsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/AnalyticsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/model/Ohlcv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/repository/CoinRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/repository/OhlcvRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/service/CoinService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/service/LstmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/service/LstmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/service/NlpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/service/NlpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/service/TechAnalysisService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/web/CoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/web/OhlcvController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/web/LstmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/web/LstmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/web/NlpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/java/com/trifunovska/analytics/web/NlpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/java/trifunovska/analytics/web/TechAnalysisController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/templates/coin.html" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/resources/templates/coin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/templates/lstm-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/resources/templates/lstm-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/templates/lstm.html" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/resources/templates/lstm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/templates/nlp.html" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/main/resources/templates/nlp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/templates/tech-analysis-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/main/resources/templates/tech-analysis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics/src/test/java/trifunovska/analytics/AnalyticsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/src/test/java/com/trifunovska/analytics/AnalyticsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/01_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/01_schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tech/Dockerfile" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="39cPKhcsNpYHhLuFLE39voQFvOY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AnalyticsApplication (1).executor": "Run",
+    "Spring Boot.AnalyticsApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/NINA/OneDrive/Desktop/digital-asset-analytics-system",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.AnalyticsApplication (1)">
+    <configuration name="AnalyticsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="analytics" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.trifunovska.analytics.AnalyticsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnalyticsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="analytics" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="trifunovska.analytics.AnalyticsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48603e5d-cdd0-4324-95f2-92cba0a45765" name="Changes" comment="" />
+      <created>1770992326411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770992326411</updated>
+      <workItem from="1770992330095" duration="9628000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

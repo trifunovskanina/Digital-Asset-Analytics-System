@@ -5,8 +5,8 @@ from nlp.nlp import load_news, predict_sentiment
 
 from nlp.nlp import SentimentRequest
 
-# python -m uvicorn app:app --port 8002
-# localhost:8002/sentiment
+# python -m uvicorn app:app --port 8001
+# localhost:8001/sentiment
 app = FastAPI()
 
 @app.post("/sentiment")

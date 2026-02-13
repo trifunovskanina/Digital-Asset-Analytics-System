@@ -11,7 +11,6 @@
         <div class="nav-title">Digital Asset Analytics System</div>
         <nav class="nav-links">
             <a th:href="@{/}">Home</a>
-            <a th:href="@{/tech-analysis-form}">Technical Analysis</a>
             <a th:href="@{/lstm-form}">LSTM Forecast</a>
             <a th:href="@{/nlp}">Sentiment Analysis</a>
         </nav>
@@ -37,7 +36,7 @@
 
         <label>
             Limit:
-            <input type="text" name="limit">
+            <input type="text" name="limit" min="1">
         </label>
 
         <button type="submit" style="margin-left: 10px;">Filter</button>

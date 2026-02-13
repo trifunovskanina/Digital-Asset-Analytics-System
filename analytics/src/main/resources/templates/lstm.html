@@ -6,7 +6,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-        /*.page-container { max-width: 1100px; margin: 80px auto 40px; padding: 0 16px; } .form-card, .metrics-card, .table-card { background: #2c3e4f; border-radius: 12px; padding: 20px 24px; margin-bottom: 24px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45); border: 1px solid rgba(148, 163, 184, 0.25); } .form-card h1 { margin-top: 0; margin-bottom: 14px; font-size: 28px; letter-spacing: 1px; text-align: left; color: #fff; } .ta-form { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; } .ta-form .field { display: flex; flex-direction: column; min-width: 160px; } .ta-form label { font-size: 13px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; } .ta-form input, .ta-form select { padding: 8px 10px; border-radius: 8px; border: 1px solid #4b5563; background: #fff; color: #2c3e4f; font-size: 14px; } .ta-form button { padding: 10px 18px; border-radius: 999px; border: none; background: #182e42; color: #fff; font-weight: 600; cursor: pointer; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; } .ta-form button:hover { background: #2a4965; } .metrics-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; } .metrics-header h2 { margin: 0; color: #fff; font-size: 20px; } .metrics-subtitle { font-size: 13px; color: #fff; } .metrics-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; } .metric { min-width: 120px; padding: 10px 14px; background: #fff; border: 1px solid rgba(148, 163, 184, 0.3); color: #2c3e4f; } .metric-label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #182e42; margin-bottom: 4px; } .metric-value { font-size: 16px; font-weight: 600; } .table-card h2 { margin-top: 0; margin-bottom: 10px; font-size: 20px; color: #fff; } .table-card small { color: #fff; font-size: 12px; } .table-slider { overflow-x: auto; } table { width: 100%; border-collapse: collapse; min-width: 420px; } thead { background: #0b1120; } th, td { padding: 8px 10px; border-bottom: 1px solid rgba(55, 65, 81, 0.8); font-size: 13px; white-space: nowrap; } th { text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; } tbody tr:nth-child(every-2) { background: rgba(15, 23, 42, 0.6); } tbody tr:hover { background: rgba(30, 64, 175, 0.25); } div.metric { border-radius: 8px; }*/
 
         h1, h2, p, small, span {
             color: #2c3e4f;
@@ -204,7 +203,6 @@
         <div class="nav-title">Digital Asset Analytics System</div>
         <nav class="nav-links">
             <a th:href="@{/}">Home</a>
-            <a th:href="@{/tech-analysis-form}">Technical Analysis</a>
             <a th:href="@{/lstm-form}">LSTM Forecast</a>
             <a th:href="@{/nlp}">Sentiment Analysis</a>
         </nav>
@@ -369,18 +367,14 @@
     </script>
 
     <script th:inline="javascript">
-        // --- Extract future forecast data ---
         const futureDates  = /*[[${result['future'].![date]}]]*/ [];
         const futurePrices = /*[[${result['future'].![predicted_close]}]]*/ [];
 
-        // --- Extract validation data
         const valTrue  = /*[[${result['validation']['true']}]]*/ [];
         const valPred  = /*[[${result['validation']['pred']}]]*/ [];
 
-        // Generate simple indices as x-axis for validation
         const valLabels = valTrue.map((_, i) => i + 1);
 
-        // --- Forecast Chart ---
         const forecastCtx = document.getElementById('forecastChart');
         if (forecastCtx) {
             new Chart(forecastCtx, {
@@ -417,7 +411,6 @@
             });
         }
 
-        // --- Validation Chart ---
         const validationCtx = document.getElementById('validationChart');
         if (validationCtx) {
             new Chart(validationCtx, {

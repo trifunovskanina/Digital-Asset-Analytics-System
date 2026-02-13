@@ -23,21 +23,12 @@ services:
     depends_on:
       - postgres
 
-  tech:
-    build:
-      context: .
-      dockerfile: tech/Dockerfile
-    ports:
-      - "8001:8001"
-    depends_on:
-      - postgres
-
   nlp:
     build:
       context: .
       dockerfile: nlp/Dockerfile
     ports:
-      - "8002:8002"
+      - "8001:8001"
     depends_on:
       - postgres
 
@@ -54,7 +45,6 @@ services:
     depends_on:
       - postgres
       - lstm
-      - tech
       - nlp
 
 volumes:

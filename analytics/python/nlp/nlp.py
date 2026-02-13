@@ -47,6 +47,9 @@ def load_news(from_date=None, to_date=None, limit=30):
 
 def predict_sentiment(df: pd.DataFrame):
 
+    if df.empty:
+        return df
+
     results = classifier(
         df["content"].tolist(),
         batch_size=16,

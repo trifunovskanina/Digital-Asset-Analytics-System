@@ -1,9 +1,10 @@
-package trifunovska.analytics.web;
+package com.trifunovska.analytics.web;
 
-import trifunovska.analytics.model.Coin;
-import trifunovska.analytics.service.CoinService;
+import com.trifunovska.analytics.model.Ohlcv;
+import com.trifunovska.analytics.service.OhlcvService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.accept.DefaultApiVersionStrategy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,11 +13,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-public class CoinController {
-    private final CoinService coinService;
+public class OhlcvController {
+    private final OhlcvService ohlcvService;
 
-    public CoinController(CoinService coinService) {
-        this.coinService = coinService;
+    public OhlcvController(OhlcvService ohlcvService) {
+        this.ohlcvService = ohlcvService;
     }
 
     @GetMapping
@@ -24,10 +25,10 @@ public class CoinController {
             @RequestParam(required = false) String symbol,
             @RequestParam(required = false) String fromDate,
             @RequestParam(required = false) String toDate,
-            @RequestParam(required = false) Integer limit,
+            @RequestParam(defaultValue = "20") Integer limit,
             Model model) {
 
-        List<Coin> rows = coinService.findSymbol(symbol, fromDate, toDate, limit);
+        List<Ohlcv> rows = ohlcvService.findSymbol(symbol, fromDate, toDate, limit);
         model.addAttribute("rows", rows);
         model.addAttribute("symbol", symbol);
         model.addAttribute("fromDate", fromDate);
@@ -43,14 +44,14 @@ public class CoinController {
             @RequestParam(required = false, defaultValue = "60") Integer limit,
             Model model) {
 
-        List<Coin> rows = coinService.findSymbol(symbol, null, null, limit);
+        List<Ohlcv> rows = ohlcvService.findSymbol(symbol, null, null, limit);
 
         List<String> labels = rows.stream()
-                .map(Coin::getDate)
+                .map(Ohlcv::getDate)
                 .collect(Collectors.toList());
 
         List<Double> closes = rows.stream()
-                .map(Coin::getClose)
+                .map(Ohlcv::getClose)
                 .collect(Collectors.toList());
 
         model.addAttribute("symbol", symbol.toUpperCase());

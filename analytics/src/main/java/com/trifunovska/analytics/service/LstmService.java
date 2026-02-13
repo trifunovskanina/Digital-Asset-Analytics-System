@@ -1,4 +1,4 @@
-package trifunovska.analytics.service;
+package com.trifunovska.analytics.service;
 
 import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ public class LstmService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public @Nullable Map runForecast(String symbol, int days) {
+    public Map<String, Object> runForecast(String symbol, int days) {
 
         Map<String, Object> request = Map.of(
                 "symbol", symbol,

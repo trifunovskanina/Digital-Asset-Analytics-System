@@ -107,7 +107,6 @@
         <div class="nav-title">Digital Asset Analytics System</div>
         <nav class="nav-links">
             <a th:href="@{/}">Home</a>
-            <a th:href="@{/tech-analysis-form}">Technical Analysis</a>
             <a th:href="@{/lstm-form}">LSTM Forecast</a>
             <a th:href="@{/nlp}">Sentiment Analysis</a>
         </nav>
@@ -201,19 +200,6 @@
                     Trainable params: <strong>7,505</strong><br/>
                     Non-trainable params: <strong>0</strong>
                 </p>
-
-<!--                <p style="margin-top:8px; font-size:14px; line-height:1.6; color:#374151;">-->
-<!--                    <strong>Parameter calculation:</strong><br/>-->
-<!--                    <b>LSTM: </b>-->
-<!--                    <code>-->
-<!--                        4 × (n × h + h × h + h)-->
-<!--                    </code>-->
-<!--                    <br/>-->
-<!--                    <b>Dropout: </b>-->
-<!--                    <code>-->
-<!--                        h × 1 + 1-->
-<!--                    </code>-->
-<!--                </p>-->
             </div>
         </div>
 
@@ -223,8 +209,6 @@
             </h1>
 
             <svg width="100%" height="260" viewBox="0 0 900 260">
-                <!-- Layer boxes -->
-                <!-- Input -->
                 <rect x="40" y="70" width="180" height="80" rx="12"
                       fill="#ffffff" stroke="#2c3e4f" stroke-width="1.5"/>
                 <text x="130" y="100" text-anchor="middle"
@@ -232,7 +216,6 @@
                 <text x="130" y="120" text-anchor="middle"
                       font-size="12" fill="#2c3e4f">(30 timesteps × features)</text>
 
-                <!-- LSTM 32 -->
                 <rect x="260" y="40" width="180" height="120" rx="12"
                       fill="#ffffff" stroke="#2c3e4f" stroke-width="1.5"/>
                 <text x="350" y="70" text-anchor="middle"
@@ -242,13 +225,11 @@
                 <text x="350" y="110" text-anchor="middle"
                       font-size="11" fill="#2c3e4f">return_sequences = True</text>
 
-                <!-- Dropout 0.2 (1) -->
                 <rect x="260" y="170" width="180" height="50" rx="12"
                       fill="#f4f7fb" stroke="#cbd5e1" stroke-width="1"/>
                 <text x="350" y="200" text-anchor="middle"
                       font-size="12" fill="#2c3e4f">Dropout (20%)</text>
 
-                <!-- LSTM 16 -->
                 <rect x="490" y="60" width="180" height="100" rx="12"
                       fill="#ffffff" stroke="#2c3e4f" stroke-width="1.5"/>
                 <text x="580" y="85" text-anchor="middle"
@@ -256,13 +237,11 @@
                 <text x="580" y="105" text-anchor="middle"
                       font-size="12" fill="#2c3e4f">16 units</text>
 
-                <!-- Dropout 0.2 (2) -->
                 <rect x="490" y="180" width="180" height="40" rx="12"
                       fill="#f4f7fb" stroke="#cbd5e1" stroke-width="1"/>
                 <text x="580" y="205" text-anchor="middle"
                       font-size="12" fill="#2c3e4f">Dropout (20%)</text>
 
-                <!-- Dense(1) -->
                 <rect x="720" y="80" width="120" height="60" rx="12"
                       fill="#ffffff" stroke="#2c3e4f" stroke-width="1.5"/>
                 <text x="780" y="105" text-anchor="middle"
@@ -270,7 +249,6 @@
                 <text x="780" y="125" text-anchor="middle"
                       font-size="12" fill="#2c3e4f">1 unit</text>
 
-                <!-- Arrows -->
                 <defs>
                     <marker id="arrow" markerWidth="10" markerHeight="10"
                             refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
@@ -285,8 +263,6 @@
                 <line x1="670" y1="100" x2="720" y2="110"
                       stroke="#2c3e4f" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-                <!-- Small circles to hint "nodes" -->
-                <!-- 32 units (grouped) -->
                 <circle cx="290" cy="125" r="5" fill="#2c3e4f"/>
                 <circle cx="310" cy="125" r="5" fill="#2c3e4f"/>
                 <circle cx="330" cy="125" r="5" fill="#2c3e4f"/>
@@ -296,7 +272,6 @@
                 <text x="350" y="145" text-anchor="middle"
                       font-size="11" fill="#2c3e4f">… 32 nodes</text>
 
-                <!-- 16 units (grouped) -->
                 <circle cx="520" cy="130" r="5" fill="#2c3e4f"/>
                 <circle cx="540" cy="130" r="5" fill="#2c3e4f"/>
                 <circle cx="560" cy="130" r="5" fill="#2c3e4f"/>
@@ -316,34 +291,21 @@
 
             <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <!-- Arrowhead for directed edges -->
                     <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto">
                         <path d="M0,0 L10,3 L0,6 z" fill="#0f172a" />
                     </marker>
 
-                    <!-- Card shadow -->
                     <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
                         <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12" />
                     </filter>
 
-                    <!-- Node style -->
                     <circle id="neuron" r="8" fill="#111827" />
                 </defs>
 
-                <!-- Background card -->
                 <rect x="20" y="20" rx="20"
                       fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"
                       filter="url(#cardShadow)" />
 
-                <!-- Title -->
-<!--                <text x="450" y="50" text-anchor="middle"-->
-<!--                      font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"-->
-<!--                      font-size="18" font-weight="600" fill="#111827">-->
-<!--                    LSTM Network Graph-->
-<!--                </text>-->
-
-                <!-- ===== Layer labels ===== -->
-                <!-- Input label -->
                 <text x="120" y="80" text-anchor="middle"
                       font-family="system-ui" font-size="12" fill="#6b7280">
                     Input layer
@@ -353,7 +315,6 @@
                     30 timesteps × features
                 </text>
 
-                <!-- LSTM 32 label -->
                 <text x="320" y="80" text-anchor="middle"
                       font-family="system-ui" font-size="12" fill="#111827" font-weight="600">
                     LSTM (32 units)
@@ -363,7 +324,6 @@
                     return_sequences = True
                 </text>
 
-                <!-- LSTM 16 label -->
                 <text x="520" y="80" text-anchor="middle"
                       font-family="system-ui" font-size="12" fill="#111827" font-weight="600">
                     LSTM (16 units)
@@ -373,13 +333,11 @@
                     return_sequences = True
                 </text>
 
-                <!-- Dense label -->
                 <text x="720" y="80" text-anchor="middle"
                       font-family="system-ui" font-size="12" fill="#111827" font-weight="600">
                     Dense (1 unit)
                 </text>
 
-                <!-- Dropout labels -->
                 <rect x="280" y="260" width="80" height="26" rx="999"
                       fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1" />
                 <text x="320" y="278" text-anchor="middle"
@@ -394,9 +352,6 @@
                     Dropout 20%
                 </text>
 
-                <!-- ===== Neuron positions ===== -->
-                <!-- y positions for 4 neurons -->
-                <!-- Input neurons -->
                 <g id="inputLayer">
                     <use href="#neuron" x="120" y="140" />
                     <use href="#neuron" x="120" y="180" />
@@ -404,7 +359,6 @@
                     <use href="#neuron" x="120" y="260" />
                 </g>
 
-                <!-- LSTM 32 neurons -->
                 <g id="lstm64">
                     <use href="#neuron" x="320" y="140" />
                     <use href="#neuron" x="320" y="180" />
@@ -412,7 +366,6 @@
                     <use href="#neuron" x="320" y="260" />
                 </g>
 
-                <!-- LSTM 16 neurons -->
                 <g id="lstm32">
                     <use href="#neuron" x="520" y="140" />
                     <use href="#neuron" x="520" y="180" />
@@ -420,72 +373,55 @@
                     <use href="#neuron" x="520" y="260" />
                 </g>
 
-                <!-- Dense output neuron -->
                 <g id="dense1">
                     <use href="#neuron" x="720" y="200" />
                 </g>
 
-                <!-- ===== Connections: Input -> LSTM64 ===== -->
-                <!-- We connect every neuron in a layer to every neuron in next layer -->
-                <!-- Input (120, y) to LSTM32 (320, y2) -->
-                <!-- y values: 140, 180, 220, 260 -->
-                <!-- Input y=140 -->
                 <line x1="120" y1="140" x2="320" y2="140" stroke="#cbd5e1" stroke-width="1.2" />
                 <line x1="120" y1="140" x2="320" y2="180" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="140" x2="320" y2="220" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="140" x2="320" y2="260" stroke="#e5e7eb" stroke-width="1" />
 
-                <!-- Input y=180 -->
                 <line x1="120" y1="180" x2="320" y2="140" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="180" x2="320" y2="180" stroke="#cbd5e1" stroke-width="1.2" />
                 <line x1="120" y1="180" x2="320" y2="220" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="180" x2="320" y2="260" stroke="#e5e7eb" stroke-width="1" />
 
-                <!-- Input y=220 -->
                 <line x1="120" y1="220" x2="320" y2="140" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="220" x2="320" y2="180" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="220" x2="320" y2="220" stroke="#cbd5e1" stroke-width="1.2" />
                 <line x1="120" y1="220" x2="320" y2="260" stroke="#e5e7eb" stroke-width="1" />
 
-                <!-- Input y=260 -->
                 <line x1="120" y1="260" x2="320" y2="140" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="260" x2="320" y2="180" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="260" x2="320" y2="220" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="120" y1="260" x2="320" y2="260" stroke="#cbd5e1" stroke-width="1.2" />
 
-                <!-- ===== Connections: LSTM64 -> LSTM32 ===== -->
-                <!-- LSTM32 y=140 -->
                 <line x1="320" y1="140" x2="520" y2="140" stroke="#cbd5e1" stroke-width="1.2" />
                 <line x1="320" y1="140" x2="520" y2="180" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="140" x2="520" y2="220" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="140" x2="520" y2="260" stroke="#e5e7eb" stroke-width="1" />
 
-                <!-- LSTM32 y=180 -->
                 <line x1="320" y1="180" x2="520" y2="140" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="180" x2="520" y2="180" stroke="#cbd5e1" stroke-width="1.2" />
                 <line x1="320" y1="180" x2="520" y2="220" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="180" x2="520" y2="260" stroke="#e5e7eb" stroke-width="1" />
 
-                <!-- LSTM32 y=220 -->
                 <line x1="320" y1="220" x2="520" y2="140" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="220" x2="520" y2="180" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="220" x2="520" y2="220" stroke="#cbd5e1" stroke-width="1.2" />
                 <line x1="320" y1="220" x2="520" y2="260" stroke="#e5e7eb" stroke-width="1" />
 
-                <!-- LSTM32 y=260 -->
                 <line x1="320" y1="260" x2="520" y2="140" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="260" x2="520" y2="180" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="260" x2="520" y2="220" stroke="#e5e7eb" stroke-width="1" />
                 <line x1="320" y1="260" x2="520" y2="260" stroke="#cbd5e1" stroke-width="1.2" />
 
-                <!-- ===== Connections: LSTM16 -> Dense1 ===== -->
-                <!-- Dense at (720, 200); add arrowheads to emphasize output -->
                 <line x1="520" y1="140" x2="720" y2="200" stroke="#cbd5e1" stroke-width="1.3" marker-end="url(#arrowHead)" />
                 <line x1="520" y1="180" x2="720" y2="200" stroke="#cbd5e1" stroke-width="1.3" marker-end="url(#arrowHead)" />
                 <line x1="520" y1="220" x2="720" y2="200" stroke="#cbd5e1" stroke-width="1.3" marker-end="url(#arrowHead)" />
                 <line x1="520" y1="260" x2="720" y2="200" stroke="#cbd5e1" stroke-width="1.3" marker-end="url(#arrowHead)" />
 
-                <!-- Output label on the right -->
                 <text x="760" y="204" text-anchor="start"
                       font-family="system-ui" font-size="11" fill="#6b7280">
                     PREDICTION

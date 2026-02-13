@@ -15,6 +15,6 @@ RUN pip install \
 
 COPY analytics/python /app/
 
-EXPOSE 8002
+EXPOSE 8001
 
-CMD ["uvicorn", "nlp.app:app", "--host", "0.0.0.0", "--port", "8002"]
+CMD ["uvicorn", "nlp.app:app", "--host", "0.0.0.0", "--port", "8001"]
