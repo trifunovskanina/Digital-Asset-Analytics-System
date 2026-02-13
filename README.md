@@ -1,6 +1,6 @@
 # Machine Learning-Driven Digital Asset Analytics System
 
-This is a containerized system composed of a Spring MVC application, two FastAPI microservices, 
+This is a containerized system composed of a Spring Boot application, two FastAPI microservices, 
 and a PostgreSQL database. It integrates historical market data and news sentiment analysis to provide 
 machine-learning insights for digital assets.
 
@@ -8,7 +8,7 @@ machine-learning insights for digital assets.
 
 ## Technologies Used
 
-- Java Spring MVC
+- Java Spring Boot
 - Python FastAPI
 - PostgreSQL
 - Docker & Docker Compose
@@ -19,7 +19,7 @@ machine-learning insights for digital assets.
 
 The system consists of four services:
 
-- A **Spring MVC** application acting as the main backend and entry point
+- A **Spring Boot** application acting as the main backend and entry point
 - A **FastAPI LSTM microservice** for machine-learning predictions
 - A **FastAPI NLP microservice** for news sentiment analysis
 - A **PostgreSQL** database for persistent storage
@@ -32,7 +32,7 @@ Services communicate internally through Docker’s network.
 
 | Service  | Technology   | Port |
 |----------|--------------|------|
-| spring   | Spring MVC   | 8080 |
+| spring   | Spring Boot  | 8080 |
 | lstm     | FastAPI      | 8000 |
 | nlp      | FastAPI      | 8001 |
 | postgres | PostgreSQL   | 5432 |
@@ -41,7 +41,7 @@ Services communicate internally through Docker’s network.
 
 ## Service Description
 
-### Spring MVC (8080)
+### Spring Boot (8080)
 Acts as the main application of the system.  
 Handles client requests and communicates with the FastAPI microservices.
 
