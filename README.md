@@ -50,11 +50,6 @@ A Long Short-Term Memory (LSTM) neural network is trained as a univariate time-s
 
 A sliding window (lookback) approach is applied, and the network consists of stacked LSTM layers followed by a fully connected output layer.
 
-* Uses historical closing prices only
-* Preserves temporal order in training and evaluation
-* Supports closing price forecasting
-* Demonstrates sequence learning with deep neural networks
-
 Exposes REST endpoints used by the Spring application.
 
 ### NLP Microservice (8001)
@@ -63,10 +58,6 @@ News sentiment analysis is performed using a pretrained transformer natural lang
 Recent cryptocurrency news articles are retrieved from the database and analyzed using a DistilBERT model fine-tuned on the Stanford Sentiment Treebank (SST-2).
 
 Each article is classified as positive or negative, along with a confidence score.
-
-* Uses a pretrained transformer model (DistilBERT)
-* Performs sentiment classification
-* Produces sentiment labels and scores for each article
 
 Exposes REST endpoints used by the Spring application.
 
