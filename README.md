@@ -72,10 +72,8 @@ Each service exposes interactive documentation:
 
 | Service         | Port | Documentation |
 |----------------|------|---------------|
-| Spring Boot   | 8080 | `/swagger-ui.html` |
 | LSTM | 8000 | `/docs` |
 | NLP | 8001 | `/docs` |
-| PostgreSQL    | 5432 | — |
 
 ---
 
