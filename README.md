@@ -72,8 +72,8 @@ Each service exposes interactive documentation:
 
 | Service         | Port | Documentation |
 |----------------|------|---------------|
-| LSTM | 8000 | `/docs` |
-| NLP | 8001 | `/docs` |
+| lstm | 8000 | `/docs` |
+| nlp  | 8001 | `/docs` |
 
 ---
 
